@@ -4,24 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mesto</title>
-  <link rel="stylesheet" href="./style.css" />
-  <script type="module" crossorigin src="./assets/index-DR-yfQp9.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bv59w5gz.css">
+  <script type="module" crossorigin src="./assets/index-Bn-0Afdw.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-kiIpiJBe.css">
 </head>
 <body class="page">
   <header class="header">
-    <img src="./assets/logo.png" alt="Логотип Mesto" class="header__logo">
+    <img src="./assets/logo-C_QQpFK1.svg" alt="Логотип Mesto" class="header__logo">
   </header>
+  
   <section class="profile">
     <img src="" alt="Аватар" class="profile__image" />
     <div class="profile__info">
       <h1 class="profile__title">Имя</h1>
       <p class="profile__description">О себе</p>
     </div>
-    <button class="profile__edit-button" type="button" aria-label="Редактировать профиль">✎</button>
+    <button class="profile__edit-button" type="button" aria-label="Редактировать профиль"><img src="data:image/svg+xml,%3csvg%20width='10'%20height='10'%20viewBox='0%200%2010%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10%201.32827L2.60377%208.7666L1.28302%207.41936L8.66038%200L10%201.32827ZM0%2010L1.96226%209.41177L0.584906%208.08349L0%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="edit"></button>
   </section>
 
-  <button class="profile__add-button" type="button" aria-label="Добавить место">+</button>
+  <button class="profile__add-button" type="button" aria-label="Добавить место"><img src="data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22%209.77778H12.2222V0H9.77778V9.77778H0V12.2222H9.77778V22H12.2222V12.2222H22V9.77778Z'%20fill='white'/%3e%3c/svg%3e" alt="add"></button>
 
   <section class="cards">
     <ul class="cards__list">
@@ -30,7 +30,7 @@
 
   <template id="card-template">
     <li class="card">
-      <button class="card__delete-button" type="button" aria-label="Удалить">×</button>
+      <button class="card__delete-button" type="button" aria-label="Удалить"><img src="data:image/svg+xml,%3csvg%20width='18'%20height='20'%20viewBox='0%200%2018%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2.45781%2018.1422C2.51876%2018.8126%203.06729%2019.3002%203.73772%2019.3002H14.2614C14.9318%2019.3002%2015.4804%2018.7923%2015.5413%2018.1422L16.7197%205.79004H1.27948L2.45781%2018.1422Z'%20fill='white'/%3e%3cpath%20d='M16.7201%201.93002H11.5801V1.27991C11.5801%200.568849%2011.0113%200%2010.3002%200H7.72009C7.00903%200%206.44018%200.568849%206.44018%201.27991V1.93002H1.27991C0.568849%201.93002%200%202.49887%200%203.20993C0%203.92099%200.568849%204.48984%201.27991%204.48984H16.7201C17.4312%204.48984%2018%203.92099%2018%203.20993C18%202.49887%2017.4312%201.93002%2016.7201%201.93002Z'%20fill='white'/%3e%3c/svg%3e" alt="del"></button>
       <img class="card__image" src="" alt="" />
       <div class="card__info">
         <h3 class="card__title"></h3>
@@ -41,7 +41,6 @@
       </div>
     </li>
   </template>
-
 
   <div class="popup popup_type_profile">
     <div class="popup__container">
@@ -88,6 +87,17 @@
       <button type="button" class="popup__close" aria-label="Закрыть">&times;</button>
       <img class="popup__image" src="" alt="" />
       <p class="popup__caption"></p>
+    </div>
+  </div>
+
+  <div class="popup popup_type_remove-card">
+    <div class="popup__container">
+      <h3 class="popup__title">Вы уверены?</h3>
+      <button type="button" class="popup__close" aria-label="Закрыть">&times;</button>
+      <form class="popup__form popup__form_type_remove">
+        <button type="submit" class="popup__button">Да</button>
+        <button type="button" class="popup__button popup__button_type_cancel">Нет</button>
+      </form>
     </div>
   </div>
 
